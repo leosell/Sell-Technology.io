@@ -6,6 +6,7 @@ const submit = () => {
     const lista_user = getLocalStorage()
     let valida = lista_user.filter(user => user.id == login.value)
     let validaPassword = lista_user.filter(user => user.password == password.value)
+    
     if (valida.length == 0) {
         Swal.fire({
             icon: 'error',
