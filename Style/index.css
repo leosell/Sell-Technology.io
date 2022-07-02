@@ -27,6 +27,7 @@
 /* Fim Nav Bar */
 
 
+
 /* Login */
 .content-main {
     width: 100vw;
@@ -48,7 +49,7 @@
     align-items: center;
 
     border-radius: 10px;
-    box-shadow: 1px 1px 10px #000;
+    box-shadow: 0 0 0.3rem #00000090;
     background-color: #FFF;
 }
 
@@ -76,6 +77,10 @@
     color: #000;
 }
 
+.content-login > input:hover {
+    outline: 1px solid #6366F1;
+}
+
 .content-login > input::placeholder {
    color: rgb(105, 105, 105);
 }
@@ -84,9 +89,17 @@
     background-color: #6366F1;
     color: #FFF;
     cursor: pointer;
+    text-transform: uppercase;
 
     margin-top: 30px;
 }
+
+#acess-button:hover {
+    background-color: #4F46E5;
+}
+/* Fim Login */
+
+
 
 /* Modal */
 .modal {
