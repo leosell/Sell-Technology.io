@@ -1,3 +1,10 @@
+const openModal = () => document.getElementById('modal').classList.add('active')
+
+const closeModal = () => {
+    limparInputs()
+    document.getElementById('modal').classList.remove('active')
+}
+
 const getLocalStorage = () => JSON.parse(localStorage.getItem('Users')) ?? []
 const checkLogin = () => {return localStorage.getItem('loggedUser')}
 const setLocalStorage = (lista_user) => localStorage.setItem('Users', JSON.stringify(lista_user))
@@ -44,7 +51,10 @@ const salvarUser = () => {
             criarUser(user)
             atualizarUser()
             alert(`Login: ${user.id} \nPassword: ${user.password} \n Seja Bem-vindo ${user.name}`)
+            limparInputs()
             closeModal()
+        } else {
+            alert('Usuario ja existe')
         }
     }
 }
@@ -55,4 +65,11 @@ const limparInputs = () => {
     document.getElementById('full-name').dataset.index = 'new'
 }
 
+document.getElementById('open-modal').addEventListener('click', openModal)
+
 document.getElementById('save-button').addEventListener('click', salvarUser)
+document.getElementById('save-button').addEventListener('click', closeModal)
+
+
+document.getElementById('modalClose').addEventListener('click', closeModal)
+document.getElementById('cancel-button').addEventListener('click', closeModal)
