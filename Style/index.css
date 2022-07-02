@@ -1,0 +1,228 @@
+/* Nav bar */
+.header-nav {
+    width: 100vw;
+    height: 7.5vh;
+}
+
+.content-nav,
+.content-nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-nav > img {
+    width: 4vw;
+}
+
+.content-nav > ul > li,
+.content-nav > ul > li > a {
+    text-decoration: none;
+    list-style: none;
+
+    font-size: 1.2rem;
+    color: #000;
+}
+/* Fim Nav Bar */
+
+
+/* Login */
+.content-main {
+    width: 100vw;
+    height: 92.5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-acess {
+    width: 40vw;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #000;
+    background-color: #FFF;
+}
+
+.content-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.content-login > label {
+    margin-top: 5px;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;;
+}
+
+.content-login > input {
+    width: 30vw;
+    height: 5vh;
+
+    outline: 1px solid #CCC;
+    border: none;
+    border-radius: 10px;
+
+    color: #000;
+}
+
+.content-login > input::placeholder {
+   color: rgb(105, 105, 105);
+}
+
+#acess-button {
+    background-color: #6366F1;
+    color: #FFF;
+
+    margin-top: 30px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60vw;
+    height: 35vh;
+    margin: 15vh auto;
+    padding-bottom: 20px;
+    background-color: #CCC;
+    box-shadow: 1px 1px 10px #000;
+}
+
+.modal-header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.8rem;
+    background-color: rgba(8, 8, 8, 0.89);
+    color: #FFF;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.modal-close:hover {
+    background-color: #FF4949;
+    color: #FFF;
+}
+
+.modal-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.modal-field {
+    width: calc(50% -10px);
+    height: 45px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 4px #000;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+}
+
+.modal-field::placeholder {
+    color: #000;
+}
+
+.modal-field:hover {
+    border: 2px solid #F7C352;
+    box-shadow: 0px 0px 3px #F7C352;
+}
+
+.modal-footer {
+    background-color: inherit;
+    text-align: right;
+    padding: 0 20px;
+}
+
+.modal-footer > button {
+    margin-top: -5px;
+    width: 10vw;
+    height: 4vh;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.button-save {
+    background-color: #13CE66;
+}
+
+.button-save:hover {
+    background-color: #2DA563;
+}
+
+.button-cancel {
+    background-color: #FF4949;
+}
+
+.button-cancel:hover {
+    background-color: #BB4E4E;
+}
+
+@media(max-width: 480px) {
+    .modal {
+        top: 100%;
+        transition: all 1s ease;
+    }
+
+    .modal.active {
+        top: 0;
+    }
+
+    .modal-content {
+        margin: 0;
+        width: 100%;
+        position: fixed;
+    }
+
+    .modal-field {
+        width: 100%;
+    }
+}
+/* Fim Modal */
