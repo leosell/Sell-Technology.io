@@ -57,6 +57,11 @@
     outline: 1px solid #6366F1;
 }
 
+.content-login > input:focus {
+    box-shadow: 1px 1px 10px #6366F1;
+    outline: 1px solid #6366F1;
+}
+
 .content-login > input::placeholder {
    color: rgb(105, 105, 105);
    
