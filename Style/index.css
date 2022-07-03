@@ -1,42 +1,14 @@
-/* Nav bar */
-.header-nav {
-    width: 100vw;
-    height: 7.5vh;
-}
-
-.content-nav,
-.content-nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-}
-
-.content-nav > img {
-    width: 4vw;
-}
-
-.content-nav > ul > li,
-.content-nav > ul > li > a {
-    text-decoration: none;
-    list-style: none;
-
-    font-size: 1.2rem;
-    color: #000;
-}
-/* Fim Nav Bar */
-
-
-
 /* Login */
 .content-main {
     width: 100vw;
-    height: 92.5vh;
+    height: 100vh;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    font-family: 'Roboto Mono', monospace;
 }
 
 .content-acess {
@@ -53,12 +25,16 @@
     background-color: #FFF;
 }
 
+.content-acess > img {
+    width: 7vw;
+}
+
 .content-login {
     display: flex;
     flex-direction: column;
     gap: 10px;
 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .content-login > label {
@@ -83,6 +59,7 @@
 
 .content-login > input::placeholder {
    color: rgb(105, 105, 105);
+   
 }
 
 #acess-button {
@@ -90,6 +67,7 @@
     color: #FFF;
     cursor: pointer;
     text-transform: uppercase;
+    font-weight: bold;
 
     margin-top: 30px;
 }
