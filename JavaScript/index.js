@@ -46,16 +46,33 @@ const salvarUser = () => {
             id: codigoUsuario(),
         }
         const index = document.getElementById('full-name').dataset.index
-        console.log(index)
-        if (index == 'new') {
+        
+        if (index != 'new') {
+            Swal.fire ({
+                icon: 'error',
+                title: 'Algo de errado...',
+                text: 'Verifique se todos os campos estão preenchidos'
+            })
+        } else {
             criarUser(user)
             atualizarUser()
-            alert(`Login: ${user.id} \nPassword: ${user.password} \n Seja Bem-vindo ${user.name}`)
+            Swal.fire ({
+                icon: 'success',
+                title: 'Login Cadastrado',
+                text: `Login: ${user.id} \nPassword: ${user.password} \nSejá Bem-vindo ${user.name}`
+            })
             limparInputs()
             closeModal()
-        } else {
-            alert('Usuario ja existe')
         }
+        // if (index != 'new') {
+        //     criarUser(user)
+        //     atualizarUser()
+        //     alert(`Login: ${user.id} \nPassword: ${user.password} \n Seja Bem-vindo ${user.name}`)
+        //     limparInputs()
+        //     closeModal()
+        // } else {
+        //     alert('Usuario ja existe')
+        // }
     }
 }
 
@@ -68,8 +85,6 @@ const limparInputs = () => {
 document.getElementById('open-modal').addEventListener('click', openModal)
 
 document.getElementById('save-button').addEventListener('click', salvarUser)
-document.getElementById('save-button').addEventListener('click', closeModal)
-
 
 document.getElementById('modalClose').addEventListener('click', closeModal)
 document.getElementById('cancel-button').addEventListener('click', closeModal)
