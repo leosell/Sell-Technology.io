@@ -100,7 +100,7 @@
 
 /* Modal */
 .modal {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -220,7 +220,7 @@
     background-color: #CC3939;
 }
 
-@media(max-width: 480px) {
+@media(max-width: 390px) {
     .modal {
         top: 100%;
         transition: all 1s ease;
@@ -232,12 +232,21 @@
 
     .modal-content {
         margin: 0;
-        width: 100%;
+        width: 100vw;
+        height: 62vh;
         position: fixed;
     }
 
     .modal-field {
-        width: 100%;
+        width: 100vw;
+    }
+
+    .modal-form > input {
+        width: 60vw;
+    }
+
+    .modal-footer > button {
+        width: 20vw;
     }
 }
 /* Fim Modal */
