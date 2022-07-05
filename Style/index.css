@@ -80,6 +80,20 @@
 #acess-button:hover {
     background-color: #4F46E5;
 }
+
+@media(max-width: 390px) {
+    .content-acess {
+        width: 80vw;
+    }
+
+    .content-acess > img {
+        width: 20vw;
+    }
+
+    .content-login > input {
+        width: 60vw;
+    }
+}
 /* Fim Login */
 
 
